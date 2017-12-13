@@ -23,6 +23,6 @@ class ServerController extends Controller
         });
         $response = $app->server->serve();
 
-        return $response;
+        $response->send();
     }
 }
