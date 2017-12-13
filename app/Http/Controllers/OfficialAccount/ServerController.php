@@ -11,7 +11,6 @@ class ServerController extends Controller
 {
     public function index()
     {
-        dd(storage_path());
         $config = [
             'app_id' => 'wxe6bd61546e337818',
             'secret' => '5950e505a3b38df6225d02e4f6fcc91a',
