@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 
 
-Route::any('/server', 'ServerController@index');
+Route::any('/server', 'OfficialAccount\ServerController@index');
