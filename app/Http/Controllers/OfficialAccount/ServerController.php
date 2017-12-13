@@ -11,17 +11,16 @@ class ServerController extends Controller
 {
     public function index()
     {
-        ini_set('always_populate_raw_post_data','-1');
-        
+        dd(storage_path());
         $config = [
             'app_id' => 'wxe6bd61546e337818',
             'secret' => '5950e505a3b38df6225d02e4f6fcc91a',
             'aes_key' => 'tOihYdEo0SRv0b6RrkxjxIRjxKM8uCe5xrEevtCDhJf',
             'token' => 'yinxce',
-//            'log' => [
-//                'level' => 'debug',
-//                'file' => __DIR__.'/wechat.log',
-//            ],
+            'log' => [
+                'level' => 'debug',
+                'file' => storage_path().'/logs/wechat.log',
+            ],
         ];
 
         $app = Factory::officialAccount($config);
