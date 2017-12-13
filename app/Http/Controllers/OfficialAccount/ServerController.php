@@ -17,7 +17,7 @@ class ServerController extends Controller
             'token' => 'yinxce',
             'log' => [
                 'level' => 'debug',
-                'file' => '/tmp/wechat.log',
+                'file' => __DIR__.'/wechat.log',
             ],
         ];
 
