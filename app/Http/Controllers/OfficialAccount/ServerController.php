@@ -12,7 +12,7 @@ class ServerController extends Controller
     {
         $config = [
           'app_id' => 'wxe6bd61546e337818',
-          'seccret' => '5950e505a3b38df6225d02e4f6fcc91a',
+          'secret' => '5950e505a3b38df6225d02e4f6fcc91a',
           'aes_key' => 'tOihYdEo0SRv0b6RrkxjxIRjxKM8uCe5xrEevtCDhJf',
           'token' => 'yinxce'
         ];
