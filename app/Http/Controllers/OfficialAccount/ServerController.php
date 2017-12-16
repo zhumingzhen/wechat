@@ -29,8 +29,6 @@ class ServerController extends Controller
             return '你好!';
         });
 
-        dd($app);
-
         $response = $app->server->serve();
 
         return $response;
