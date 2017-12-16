@@ -12,8 +12,8 @@ class ServerController extends Controller
     public function index()
     {
         $config = [
-            'app_id' => 'wxe6bd61546e337818',
-            'secret' => '5950e505a3b38df6225d02e4f6fcc91a',
+            'app_id' => 'wxddb850a3ccde494a',
+            'secret' => 'b52217e68b0f518f56bb9f0589ef4328',
             'aes_key' => 'tOihYdEo0SRv0b6RrkxjxIRjxKM8uCe5xrEevtCDhJf',
             'token' => 'yinxce',
             'log' => [
@@ -29,6 +29,6 @@ class ServerController extends Controller
         });
         $response = $app->server->serve();
 
-        return 'success';
+        return $response;
     }
 }
