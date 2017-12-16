@@ -24,6 +24,8 @@ class ServerController extends Controller
 
         $app = Factory::officialAccount($config);
 
+        return $app;
+
         $app->server->push(function ($message){
             return '你好!';
         });
