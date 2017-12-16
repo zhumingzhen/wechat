@@ -24,11 +24,12 @@ class ServerController extends Controller
 
         $app = Factory::officialAccount($config);
 
-        dd($app);
-
         $app->server->push(function ($message){
             return '你好!';
         });
+
+        dd($app);
+
         $response = $app->server->serve();
 
         return $response;
