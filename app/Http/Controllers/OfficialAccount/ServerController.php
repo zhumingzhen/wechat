@@ -12,9 +12,8 @@ class ServerController extends Controller
     public function index()
     {
         $config = [
-            'app_id' => 'wxddb850a3ccde494a',
-            'secret' => 'b52217e68b0f518f56bb9f0589ef4328',
-            'aes_key' => 'tOihYdEo0SRv0b6RrkxjxIRjxKM8uCe5xrEevtCDhJf',
+            'app_id' => 'wx9d25fceff6d170a4',
+            'secret' => 'ed6e18820efb9cd34c85aaab253d0633',
             'token' => 'yinxce',
             'response_type'=>'collection',
             'log' => [
