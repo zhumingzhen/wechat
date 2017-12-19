@@ -24,9 +24,9 @@ class ServerController extends Controller
 
         $app = Factory::officialAccount($config);
 
-
-        $app->server->push(function ($message){
-            return '你好!';
+        $app->server->push(function ($message) use ($app){
+            $user = $app->user->get($message['FromUserName']);
+            return '你好!'.$user['nickname'].'你说了一句'.$message['Content'];
         });
 
         $response = $app->server->serve();
