@@ -11,17 +11,15 @@ class ServerController extends Controller
 {
     public function index()
     {
-        ini_set('always_populate_raw_post_data','-1');
-
         $config = [
             'app_id' => 'wxe6bd61546e337818',
-            'secret' => '5950e505a3b38df6225d02e4f6fcc91a',
-            'aes_key' => 'tOihYdEo0SRv0b6RrkxjxIRjxKM8uCe5xrEevtCDhJf',
+            'secret' => 'a4c7347a2500c0e76d806f6c463dd0db',
             'token' => 'yinxce',
-//            'log' => [
-//                'level' => 'debug',
-//                'file' => __DIR__.'/wechat.log',
-//            ],
+            'response_type'=>'collection',
+            'log' => [
+                'level' => 'debug',
+                'file' => storage_path().'/logs/wechat.log',
+            ],
         ];
 
         $app = Factory::officialAccount($config);
@@ -30,6 +28,7 @@ class ServerController extends Controller
         $app->server->push(function ($message){
             return '你好!';
         });
+
         $response = $app->server->serve();
 
         return $response;
