@@ -12,7 +12,7 @@ class ServerController extends Controller
     public function index()
     {
         ini_set('always_populate_raw_post_data','-1');
-        
+
         $config = [
             'app_id' => 'wxe6bd61546e337818',
             'secret' => '5950e505a3b38df6225d02e4f6fcc91a',
@@ -25,6 +25,7 @@ class ServerController extends Controller
         ];
 
         $app = Factory::officialAccount($config);
+
 
         $app->server->push(function ($message){
             return '你好!';
