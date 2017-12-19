@@ -108,6 +108,7 @@ class ServerController extends Controller
                 ],
             ],
         ];
-        $app->menu->create($buttons);
+        $result = $app->menu->create($buttons);
+        return $result;
     }
 }
