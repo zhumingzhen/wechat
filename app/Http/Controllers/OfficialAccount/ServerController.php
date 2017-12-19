@@ -14,6 +14,7 @@ class ServerController extends Controller
         $config = [
             'app_id' => 'wxe6bd61546e337818',
             'secret' => 'a4c7347a2500c0e76d806f6c463dd0db',
+            'aes_key' => 'tOihYdEo0SRv0b6RrkxjxIRjxKM8uCe5xrEevtCDhJf',
             'token' => 'yinxce',
             'log' => [
                 'level' => 'debug',
