@@ -8,9 +8,9 @@ use App\Http\Controllers\Controller;
 use EasyWeChat\Factory;
 
 class ServerController extends Controller
-[
+{
     public function index()
-    [
+    {
         $config = [
             'app_id' => 'wxe6bd61546e337818',
             'secret' => 'a4c7347a2500c0e76d806f6c463dd0db',
@@ -18,7 +18,7 @@ class ServerController extends Controller
             'token' => 'yinxce',
             'log' => [
                 'level' => 'debug',
-                'file' => storage_path().'/logs/wechat.log',
+                'file' => storage_path() . '/logs/wechat.log',
             ],
         ];
 
@@ -81,5 +81,5 @@ class ServerController extends Controller
 
         $response = $app->menu->create($menu);
         return $response;
-    ]
-]
+    }
+}
