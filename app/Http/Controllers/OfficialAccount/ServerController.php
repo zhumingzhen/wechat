@@ -31,7 +31,7 @@ class ServerController extends Controller
 //
 //        $response = $app->server->serve();
 
-        $menu = '[
+        /*$menu = '[
                     [
                         "name": "扫码", 
                         "sub_button": [
@@ -80,6 +80,34 @@ class ServerController extends Controller
                 ]';
 
         $response = $app->menu->create($menu);
-        return $response;
+        return $response;*/
+        $buttons = [
+            [
+                "type" => "click",
+                "name" => "今日歌曲",
+                "key"  => "V1001_TODAY_MUSIC"
+            ],
+            [
+                "name"       => "菜单",
+                "sub_button" => [
+                    [
+                        "type" => "view",
+                        "name" => "搜索",
+                        "url"  => "http://www.soso.com/"
+                    ],
+                    [
+                        "type" => "view",
+                        "name" => "视频",
+                        "url"  => "http://v.qq.com/"
+                    ],
+                    [
+                        "type" => "click",
+                        "name" => "赞一下我们",
+                        "key" => "V1001_GOOD"
+                    ],
+                ],
+            ],
+        ];
+        $app->menu->create($buttons);
     }
 }
