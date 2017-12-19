@@ -15,7 +15,6 @@ class ServerController extends Controller
             'app_id' => 'wxe6bd61546e337818',
             'secret' => 'a4c7347a2500c0e76d806f6c463dd0db',
             'token' => 'yinxce',
-            'response_type'=>'collection',
             'log' => [
                 'level' => 'debug',
                 'file' => storage_path().'/logs/wechat.log',
