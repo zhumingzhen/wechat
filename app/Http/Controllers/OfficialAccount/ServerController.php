@@ -30,7 +30,7 @@ class ServerController extends Controller
     public function index()
     {
 
-        $app = $this->app;
+        $app = $this->app; 
         $app->server->push(function ($message) use ($app)[
             $user = $app->user->get($message['FromUserName']);
             return '你好!'.$user['nickname'].'你说了一句'.$message['Content'];
