@@ -34,8 +34,13 @@ class ServerController extends Controller
             $user = $app->user->get($message['FromUserName']);
             switch ($message['MsgType']) {
                 case 'event':
-                    if ($message['Event'] == 'subscribe'){
-                        return "感谢您关注【卓锦苏州】"."\n"."微信号：zhuojinsz"."\n"."卓越锦绣，名城苏州，我们为您提供苏州本地生活指南，苏州相关信息查询，做最好的苏州微信平台。"."\n"."目前平台功能如下："."\n"."【1】 查天气，如输入：苏州天气"."\n"."【2】 查公交，如输入：苏州公交178"."\n"."【3】 翻译，如输入：翻译I love you"."\n"."【4】 苏州信息查询，如输入：苏州观前街"."\n"."更多内容，敬请期待...";
+                    switch ($message['Event']){
+                        case 'subscribe':  // 关注公众号
+                            return "感谢您关注【跳动相册】"."\n"."微信号：203737123"."\n"."指尖跳动，名城北京，我们为您提供北京本地生活指南，北京相关信息查询，做最好的北京微信平台。"."\n"."目前平台功能如下："."\n"."【1】 查天气，如输入：北京天气"."\n"."【2】 查公交，如输入：北京公交178"."\n"."【3】 翻译，如输入：翻译I love you"."\n"."【4】 北京信息查询，如输入：北京观前街"."\n"."更多内容，敬请期待...";
+                            break;
+                        case 'unsubscribe':
+                            // 取消关注
+                            break;
                     }
                     return '收到事件消息';
                     break;
