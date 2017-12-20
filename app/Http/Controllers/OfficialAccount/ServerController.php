@@ -6,7 +6,6 @@ namespace App\Http\Controllers\OfficialAccount;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use EasyWeChat\Factory;
-use EasyWeChat\Kernel\Messages;
 
 class ServerController extends Controller
 {
