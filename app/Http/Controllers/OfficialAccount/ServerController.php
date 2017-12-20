@@ -81,7 +81,7 @@ class ServerController extends Controller
 //                ];
 //
 //        $response = $app->menu->create($menu);
-//        return $response;
+        return $response;
 
     }
 }
