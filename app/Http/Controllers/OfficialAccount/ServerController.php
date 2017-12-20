@@ -32,6 +32,10 @@ class ServerController extends Controller
 
         $response = $app->server->serve();
 
+        return $response;
+
+    }
+}
 //        $menu = [
 //                    [
 //                        "name"=>"扫码",
@@ -81,7 +85,3 @@ class ServerController extends Controller
 //                ];
 //
 //        $response = $app->menu->create($menu);
-        return $response;
-
-    }
-}
