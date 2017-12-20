@@ -10,8 +10,12 @@ use EasyWeChat\Kernel\Messages;
 
 class ServerController extends Controller
 {
-    private $app;
     public function __construct()
+    {
+
+    }
+
+    public function index()
     {
         $config = [
             'app_id' => 'wxe6bd61546e337818',
@@ -24,13 +28,8 @@ class ServerController extends Controller
             ],
         ];
 
-        $this->app = Factory::officialAccount($config);
-    }
+        $app = Factory::officialAccount($config);
 
-    public function index()
-    {
-
-        $app = $this->app;
         $app->server->push(function ($message) use ($app)[
             $user = $app->user->get($message['FromUserName']);
             return '你好!'.$user['nickname'].'你说了一句'.$message['Content'];
