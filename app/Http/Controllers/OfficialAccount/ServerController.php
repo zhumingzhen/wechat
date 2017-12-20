@@ -9,9 +9,9 @@ use EasyWeChat\Factory;
 
 class ServerController extends Controller
 {
-    public $app;
+    private $app;
 
-    public static function __callStatic()
+    public function __construct()
     {
         $config = [
             'app_id' => 'wxe6bd61546e337818',
