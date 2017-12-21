@@ -17,3 +17,7 @@ Route::get('/', function () {
 
 
 Route::any('/server', 'OfficialAccount\ServerController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
