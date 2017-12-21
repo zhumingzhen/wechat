@@ -39,12 +39,16 @@
         <form action="{{ route('login') }}" method="post">
             {{ csrf_field() }}
             <div class="form-group has-feedback">
-                <input type="email" name="email" class="form-control" value="{{ old('email') }}" placeholder="Email">
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                <input type="email" name="email" class="form-control" value="{{ old('email') }}" placeholder="Email" required autofocus>
+                @if ($errors->has('email'))
+                    <span class="glyphicon glyphicon-envelope form-control-feedback">{{ $errors->first('email') }}</span>
+                @endif
             </div>
             <div class="form-group has-feedback">
                 <input type="password" name="password" class="form-control" value="{{ old('Password') }}" placeholder="Password">
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                @if ($errors->has('password'))
+                <span class="glyphicon glyphicon-lock form-control-feedback">{{ $errors->first('password') }}</span>
+                @endif
             </div>
             <div class="row">
                 <div class="col-xs-8">
