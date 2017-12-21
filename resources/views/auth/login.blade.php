@@ -45,7 +45,7 @@
                 @endif
             </div>
             <div class="form-group has-feedback">
-                <input type="password" name="password" class="form-control" value="{{ old('Password') }}" placeholder="Password">
+                <input type="password" name="password" class="form-control" value="" placeholder="Password">
                 @if ($errors->has('password'))
                 <span class="glyphicon glyphicon-lock form-control-feedback">{{ $errors->first('password') }}</span>
                 @endif
@@ -66,17 +66,17 @@
             </div>
         </form>
 
-        <div class="social-auth-links text-center">
+        {{--<div class="social-auth-links text-center">
             <p>- OR -</p>
             <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
                 Facebook</a>
             <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
                 Google+</a>
-        </div>
+        </div>--}}
         <!-- /.social-auth-links -->
 
         <a href="{{ route('password.request') }}">I forgot my password</a><br>
-        <a href="register.html" class="text-center">Register a new membership</a>
+        <a href="{{ route('password.register') }}" class="text-center">Register a new membership</a>
 
     </div>
     <!-- /.login-box-body -->
