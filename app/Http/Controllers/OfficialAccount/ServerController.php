@@ -32,7 +32,7 @@ class ServerController extends Controller
         $subscribe = Subscribe::first();  // 查询自动回复内容
         $subscribeContent = $subscribe['content'];
         $app = $this->app;
-        $app->server->push(function ($message,$subscribeContent) use ($app) {
+        $app->server->push(function ($message) use ($app,$subscribeContent) {
             $user = $app->user->get($message['FromUserName']);
             switch ($message['MsgType']) {
                 case 'event':
