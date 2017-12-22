@@ -29,16 +29,16 @@ class ServerController extends Controller
 
     public function index()
     {
-        $subscribe = Subscribe::first();
-        dd($subscribe['content']);
+        $subscribe = Subscribe::first();  // 查询自动回复内容
+        $subscribeContent = $subscribe['content'];
         $app = $this->app;
-        $app->server->push(function ($message) use ($app) {
+        $app->server->push(function ($message,$subscribeContent) use ($app) {
             $user = $app->user->get($message['FromUserName']);
             switch ($message['MsgType']) {
                 case 'event':
                     switch ($message['Event']){
                         case 'subscribe':  // 关注公众号
-                            return "";
+                            return $subscribeContent;
                             break;
                         case 'unsubscribe':
                             // 取消关注
