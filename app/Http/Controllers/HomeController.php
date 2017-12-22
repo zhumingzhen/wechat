@@ -30,15 +30,12 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
-//        $input = $request->all();
-//        Subscribe::create($input);
-        $Subscribe = new Subscribe;
-
-        $Subscribe->title = $request->title;
-
-        $Subscribe->content = $request->content;
-
-        $Subscribe->save();
+        $input = $request->all();
+        Subscribe::create($input);
+//        $Subscribe = new Subscribe;
+//        $Subscribe->title = $request->title;
+//        $Subscribe->content = $request->content;
+//        $Subscribe->save();
 
         return redirect('home')->with('success','成功！');
     }
