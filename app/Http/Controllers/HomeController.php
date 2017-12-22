@@ -34,9 +34,9 @@ class HomeController extends Controller
 //        Subscribe::create($input);
         $Subscribe = new Subscribe;
 
-        $Subscribe->title = $request->title;
+        $Subscribe->title = $request->input('title');
 
-        $Subscribe->content = $request->content;
+        $Subscribe->content = $request->input('content');
 
         $Subscribe->save();
 
