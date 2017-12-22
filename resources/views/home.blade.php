@@ -25,7 +25,7 @@
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form role="form">
+                    <form role="form" action="action="{{ route('login') }}"" method="post">
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="subscribeTitle">设置标题</label>
