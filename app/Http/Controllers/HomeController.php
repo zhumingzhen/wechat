@@ -31,7 +31,7 @@ class HomeController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        Subscribe::create($input);
+        Subscribe::updateOrCreate($input);
 //        $Subscribe = new Subscribe;
 //        $Subscribe->title = $request->title;
 //        $Subscribe->content = $request->content;
