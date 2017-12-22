@@ -31,6 +31,8 @@ class HomeController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        dd($input);
+        Subscribe::create($input);
+
+        return Redirect::to('/home');
     }
 }
