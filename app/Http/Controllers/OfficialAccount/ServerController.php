@@ -38,7 +38,7 @@ class ServerController extends Controller
                 case 'event':
                     switch ($message['Event']){
                         case 'subscribe':  // 关注公众号
-                            return $subscribeContent;
+                            return "$subscribeContent";
                             break;
                         case 'unsubscribe':
                             // 取消关注
