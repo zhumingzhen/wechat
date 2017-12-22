@@ -33,7 +33,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="subscribeContent">Password</label>
-                                <textarea class="form-control" rows="5" name="subscribeContent" id="subscribeContent" placeholder="回复内容" value="{{ $subscribe['content'] }}"></textarea>
+                                <textarea class="form-control" rows="5" name="subscribeContent" id="subscribeContent" placeholder="回复内容">{{ $subscribe['content'] }}</textarea>
                             </div>
                         </div>
                         <!-- /.box-body -->
