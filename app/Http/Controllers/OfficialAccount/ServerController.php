@@ -31,7 +31,7 @@ class ServerController extends Controller
     {
         $subscribeData = Subscribe::first();  // 查询自动回复内容
         $subscribeContent = $subscribeData['content'];
-        $subscribe = '"'.$subscribeContent.'"';
+        $subscribe = "$subscribeContent";
         // 处理换行
 //        $subscribeContentArrs = explode('}>',$subscribeContent);
 //        $subscribe = "";
