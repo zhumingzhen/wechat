@@ -21,4 +21,4 @@ Route::any('/server', 'OfficialAccount\ServerController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home/store', 'HomeController@store')->name('subscribe.store');
+Route::post('/home/store', 'HomeController@store')->name('subscribe.store');
