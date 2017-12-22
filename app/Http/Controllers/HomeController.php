@@ -27,4 +27,10 @@ class HomeController extends Controller
         $subscribe = Subscribe::first();
         return view('home', compact('subscribe'));
     }
+
+    public function store(Request $request)
+    {
+        $input = $request::all();
+        dd($input);
+    }
 }
