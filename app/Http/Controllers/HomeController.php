@@ -32,7 +32,7 @@ class HomeController extends Controller
     {
         $input = $request->all();
         unset($input['_token']);
-        Subscribe::updateOrCreate(['id' => 7],$input);
+        Subscribe::updateOrCreate(['id' => 7]);
 //        $Subscribe = new Subscribe;
 //        $Subscribe->title = $request->title;
 //        $Subscribe->content = $request->content;
