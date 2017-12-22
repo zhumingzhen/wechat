@@ -29,7 +29,7 @@
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="subscribeTitle">设置标题</label>
-                                <input type="text" class="form-control" name="subscribeTitle" id="subscribeTitle" placeholder="设置标题" value="{{ $subscribe['title }}">
+                                <input type="text" class="form-control" name="subscribeTitle" id="subscribeTitle" placeholder="设置标题" value="{{ $subscribe['title'] }}">
                             </div>
                             <div class="form-group">
                                 <label for="subscribeContent">Password</label>
