@@ -33,11 +33,11 @@ class ServerController extends Controller
         $subscribeContent = $subscribeData['content'];
         $subscribe = "$subscribeContent";
         // 处理换行
-//        $subscribeContentArrs = explode('}>',$subscribeContent);
-//        $subscribe = "";
-//        foreach ($subscribeContentArrs as $subscribeContentArr){
-//            $subscribe .= $subscribeContentArr."\n";
-//        }
+        $subscribeContentArrs = explode('}>',$subscribeContent);
+        $subscribe = "";
+        foreach ($subscribeContentArrs as $subscribeContentArr){
+            $subscribe .= $subscribeContentArr."\n";
+        }
         $app = $this->app;
         $app->server->push(function ($message) use ($app,$subscribe) {
             $user = $app->user->get($message['FromUserName']);
