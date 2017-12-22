@@ -26,6 +26,7 @@
                     <!-- /.box-header -->
                     <!-- form start -->
                     <form role="form" action="{{ route('subscribe.store') }}" method="post">
+                        {!! csrf_field() !!}
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="subscribeTitle">设置标题</label>
