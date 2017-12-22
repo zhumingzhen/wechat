@@ -1,4 +1,4 @@
-@extends('app.blade.php')
+@extends('layouts.app.blade.php')
 
 @section('content')
     <!-- Content Header (Page header) -->
