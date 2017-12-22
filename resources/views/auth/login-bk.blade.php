@@ -1,4 +1,4 @@
-@extends('layouts.app-bk.blade.php')
+@extends('layouts.app-bk')
 
 @section('content')
 <div class="container">
