@@ -28,9 +28,9 @@ class HomeController extends Controller
         return view('home', compact('subscribe'));
     }
 
-    public function store(Request $request)
+    public function store()
     {
-        $input = $request::all();
+        $input = Request::all();
         dd($input);
     }
 }
