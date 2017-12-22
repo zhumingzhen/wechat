@@ -30,7 +30,7 @@ class ServerController extends Controller
     public function index()
     {
         $subscribe = Subscribe::first();
-        dd($subscribe);
+        dd($subscribe['content']);
         $app = $this->app;
         $app->server->push(function ($message) use ($app) {
             $user = $app->user->get($message['FromUserName']);
