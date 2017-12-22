@@ -31,9 +31,7 @@ class HomeController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        print_r($input);
         unset($input['_token']);
-        dd($input);
         Subscribe::updateOrCreate($input);
 //        $Subscribe = new Subscribe;
 //        $Subscribe->title = $request->title;
