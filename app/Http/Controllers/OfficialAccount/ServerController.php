@@ -31,12 +31,13 @@ class ServerController extends Controller
     {
         $subscribeData = Subscribe::first();  // 查询自动回复内容
         $subscribeContent = $subscribeData['content'];
+        $subscribe = '"'.$subscribeContent.'"';
         // 处理换行
-        $subscribeContentArrs = explode('}>',$subscribeContent);
-        $subscribe = "";
-        foreach ($subscribeContentArrs as $subscribeContentArr){
-            $subscribe .= $subscribeContentArr."\n";
-        }
+//        $subscribeContentArrs = explode('}>',$subscribeContent);
+//        $subscribe = "";
+//        foreach ($subscribeContentArrs as $subscribeContentArr){
+//            $subscribe .= $subscribeContentArr."\n";
+//        }
         $app = $this->app;
         $app->server->push(function ($message) use ($app,$subscribe) {
             $user = $app->user->get($message['FromUserName']);
