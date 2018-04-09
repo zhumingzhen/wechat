@@ -9,6 +9,9 @@ use EasyWeChat\Factory;
 
 class ServerController extends Controller
 {
+    /**
+     * @return mixed
+     */
     public function index()
     {
         $config = [
