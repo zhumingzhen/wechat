@@ -24,5 +24,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home/store', 'HomeController@store')->name('subscribe.store');
 
 # 邮箱验证url
-Routr::get('/register/verify/{token}',['as' => 'email.verify', 'uses' => 'EmailController@verifyW']);
+Route::get('/register/verify/{token}',['as' => 'email.verify', 'uses' => 'EmailController@verifyW']);
 
